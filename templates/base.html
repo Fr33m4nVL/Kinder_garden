@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детский сад с. Роща</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <p><a href="{% url 'home' %}">Филиал №7 - "Детский сад с. Роща"</a></p>
+                </div>
+                <div class="search">
+                    <img class="search-logo" src="{% static 'img/search.svg' %}" alt="Поиск">
+                    <p class="search-logo">Поиск</p>
+                </div>
+                <div class="eye">
+                    <a href="#"><img src="{% static 'img/profile.svg' %}" alt="eye"></a>
+                </div>
+            </nav>
+
+            <div class="bottom-bar">
+                <div id="violet" class="tile">
+                    <a href="#">Сведения об образовательной организации</a>
+                </div>
+                <div id="blue" class="tile">
+                    <a href="#">Методическая копилка</a>
+                </div>
+                <div id="lime" class="tile">
+                    <a href="#">Педагогический состав</a>
+                </div>
+                <div id="pink" class="tile">
+                    <a href="{% url 'home' %}">Новости</a>
+                </div>
+                <div id="yellow" class="tile">
+                    <a href="#">Фотоальбом</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="info">
+                <div class="info-item name">
+                    <p>
+                        Филиал №7 Муниципального бюджетного дошкольного образовательного учреждения
+                        Шалинского городского округа «Детский сад №3» - «Детский сад с. Роща
+                    </p>
+                </div>
+                <div class="info-item adress">
+                    <p>
+                        623016, Свердловская область,  Шалинский район, с.Роща, ул.Лермонтова, д.-7
+                    </p>
+                </div>
+                <div class="info-item tel">
+                    <p>
+                        Тел: 34358-49-2-34
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section>
+            <div class="container">
+                <div class="news">
+                <h1>Новости</h1>
+
+                <div class="sliders">
+                    {% for post in object_list %}
+                        <div class="slider">
+                            <div class="wrapper">
+                                <img class="preview" src="{{ post.preview.url }}" alt="{{ post.title }}">
+                                <a id="new" href="{% url 'post_detail' post.pk %}">
+                                    <div class="title">
+                                        <h2>{{ post.title }}</h2>
+                                        <img src="{% static 'img/arrow.svg' %}" alt="arrow">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

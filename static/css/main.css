@@ -1,0 +1,273 @@
+:root {
+    --bg-gray: #F7FAFC;
+
+    --bg-green: #15803D;
+    --text-green: #16A34A;
+
+    --bg-violet: #E9D5FF;
+    --text-violet: #9333EA;
+    --hover-violet: #5b21b6;
+
+    --bg-blue: #BAE6FD;
+    --text-blue: #0284C7;
+    --hover-blue: #1e40af;
+
+    --bg-lime: #D9F99D;
+    --text-lime: #65A30D;
+    --hover-lime: #3f6212;
+
+    --bg-pink: #FBCFE8;
+    --text-pink: #DB2777;
+    --hover-pink: #9d174d;
+
+    --bg-yellow: #FEF08A;
+    --text-yellow: #CA8A04;
+    --hover-yellow: #854d0e;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    background-color: var(--bg-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+
+nav {
+    background-color: var(--bg-green);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 23px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    font-size: 36px;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.search {
+    font-size: 32px;
+    background-color: white;
+    color: var(--text-green);
+    display: flex;
+    padding-right: 170px;
+    border-radius: 10px;
+}
+
+.search-logo {
+    margin-left: 12px;
+}
+
+/* Bottom-bar */
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.tile {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tile a {
+    font-size: 20px;
+}
+
+#violet {background-color: var(--bg-violet);}
+#violet a {color: var(--text-violet);}
+#violet a:hover {color: var(--hover-violet)}
+
+#blue {background-color: var(--bg-blue);}
+#blue a {color: var(--text-blue);}
+#blue a:hover {color: var(--hover-blue)}
+
+#lime {background-color: var(--bg-lime);}
+#lime a {color: var(--text-lime);}
+#lime a:hover {color: var(--hover-lime)}
+
+#pink {background-color: var(--bg-pink);}
+#pink a {color: var(--text-pink);}
+#pink a:hover {color: var(--hover-pink)}
+
+#yellow {background-color: var(--bg-yellow);}
+#yellow a {color: var(--text-yellow);}
+#yellow a:hover {color: var(--hover-yellow)}
+
+/* News */
+
+h1 {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 200;
+}
+
+
+.sliders {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.slider {
+    flex-basis: 33.333%;
+    flex-grow: 1;
+} 
+
+.wrapper {
+    margin-top: 85px;
+    max-width: 320px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview {
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+}
+
+
+.title {
+    display: flex;
+    color: #06B6D4;
+    font-weight: lighter;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.title h2 {
+    margin: 10px 20px;
+    font-weight: 100;
+}
+
+.title img {
+    margin: 10px 20px;
+}
+
+/* Detail post */
+
+.body-content p {
+    margin-top: 40px;
+}
+
+/* Footer */
+
+.info {
+    background-color: #6B7280;
+    display: flex;
+    color: #fff;
+    margin-top: 180px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.info-item {
+    margin: 30px;
+}
+
+/* Media */
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 970px;
+    }
+    .logo p {
+        font-size: 30px;
+    }
+    .search p {
+        font-size: 28px;
+    }
+    .tile a {
+        font-size: 16px;
+    }
+    .slider {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .logo p {
+        font-size: 24px;
+    }
+    .search p {
+        font-size: 24px;
+        margin-right: -100px;
+    }
+    .tile a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 450px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .logo p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .search {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .search p {
+        font-size: 20px;
+    }
+    .bottom-bar {
+        flex-direction: column;
+    }
+    .tile {
+        margin-top: 5px;
+    }
+    .tile a {
+        font-size: 12px;
+    }
+    .info {
+        flex-direction: column;
+    }
+}
