@@ -1,1 +1,0 @@
-web: gunicorn kinder_garden.wsgi --log-file -

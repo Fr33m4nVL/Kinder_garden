@@ -25,8 +25,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'corsheaders',
-    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'widget_tweaks',
     'users.apps.UsersConfig',
@@ -36,16 +34,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 
 ROOT_URLCONF = 'kinder_garden.urls'
@@ -121,7 +115,6 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = 'media'

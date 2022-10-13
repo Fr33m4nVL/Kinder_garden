@@ -10,9 +10,6 @@ pillow = "*"
 django-widget-tweaks = "*"
 django-multiupload = "*"
 environs = {extras = ["django"], version = "*"}
-whitenoise = "*"
-django-cors-headers = "*"
-gunicorn = "*"
 
 [dev-packages]
 
