@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d876111147e2093d444bda52f8e87b75ab91740c9b416b3117933d942470b8e7"
+            "sha256": "5b66200623e6e953ed79c15874f360cdfa53e77bd8d3da5d00ae117bcf102813"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -68,6 +68,14 @@
             ],
             "index": "pypi",
             "version": "==0.6.1"
+        },
+        "django-waitress": {
+            "hashes": [
+                "sha256:befb3cd608c3b10ded724fcaa3940459796eeeb1551fef0610d66dfdb5772b49",
+                "sha256:c24bcd90e9134979b23c046c64c94cab5a224fe5d6d1f5449dd27e3559c5245d"
+            ],
+            "index": "pypi",
+            "version": "==0.1.0"
         },
         "django-widget-tweaks": {
             "hashes": [
@@ -216,6 +224,14 @@
             ],
             "markers": "sys_platform == 'win32'",
             "version": "==2022.5"
+        },
+        "waitress": {
+            "hashes": [
+                "sha256:1bb436508a7487ac6cb097ae7a7fe5413aefca610550baf58f0940e51ecfb261",
+                "sha256:3d633e78149eb83b60a07dfabb35579c29aac2d24bb803c18b26fb2ab1a584db"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
+            "version": "==1.4.4"
         },
         "whitenoise": {
             "hashes": [
