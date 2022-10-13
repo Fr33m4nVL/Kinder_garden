@@ -44,7 +44,7 @@ MIDDLEWARE = [
 ]
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 ROOT_URLCONF = 'kinder_garden.urls'
 
@@ -119,6 +119,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+STATICFILES_STORAGE = ['whitenoise.storage.CompressedManifestStaticFilesStorage']
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = 'media'
