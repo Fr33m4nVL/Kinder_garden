@@ -12,7 +12,7 @@ django-multiupload = "*"
 environs = {extras = ["django"], version = "*"}
 whitenoise = "*"
 django-cors-headers = "*"
-django-waitress = "*"
+gunicorn = "*"
 
 [dev-packages]
 

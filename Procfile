@@ -1,1 +1,1 @@
-web: waitress-serve --listen=*:8000 kinder_garden.wsgi:application
+web: gunicorn kinder_garden.wsgi --log-file -
