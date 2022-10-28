@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -109,15 +109,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
 STATICFILES_DIRS = ['static']
-STATIC_ROOT = 'staticfiles' #ADD AT PRODUCTOIN
+STATIC_ROOT = BASE_DIR / 'staticfiles' #ADD AT PRODUCTOIN
+MEDIA_ROOT = BASE_DIR / 'media'
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = 'media'
 
 # Default primary key field type
 

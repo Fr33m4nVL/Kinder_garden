@@ -1,4 +1,5 @@
 from django.urls import reverse_lazy
+from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -12,11 +13,11 @@ class NewsDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-'''
 class NewsCreateView(CreateView):
     model = Post
     template_name = 'post_new.html'
-    fields = ['title', 'body', 'preview', 'picture_1', 'picture_2', 'picture_3', 'picture_4', 'picture_5', 'author']
+    fields = ['title', 'body', 'preview', 'image', 'author']
+
 
 class NewsEditView(UpdateView):
     model = Post
@@ -26,4 +27,4 @@ class NewsEditView(UpdateView):
 class DeleteView(DeleteView):
     model = Post
     template_name = 'post_delete.html'
-    success_url = reverse_lazy('home')'''
+    success_url = reverse_lazy('home')
