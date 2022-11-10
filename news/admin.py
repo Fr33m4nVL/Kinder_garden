@@ -1,5 +1,11 @@
 from django.contrib import admin
 
-from .models import Post
+from . import models
 
-admin.site.register(Post)
+class ImageInline(admin.StackedInline):
+    model = models.Image
+    extra = 0
+
+@admin.register(models.Post)
+class PostAdmin(admin.ModelAdmin):
+    inlines = [ImageInline]

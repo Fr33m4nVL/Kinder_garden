@@ -6,7 +6,7 @@ class Post(models.Model):
     title = models.CharField(max_length=60)
     body = models.TextField(null=True, blank=True)
     preview = models.ImageField(upload_to='previews')
-    image = models.ImageField(upload_to='content', blank=True, null=True)
+    #image = models.ImageField(upload_to='content', blank=True, null=True)
     date_created = models.DateField(auto_now_add=True, null=True, blank=True)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
@@ -15,3 +15,7 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
+    
+class Image(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='content', blank=True, null=True)
