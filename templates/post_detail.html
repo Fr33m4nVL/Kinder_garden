@@ -4,4 +4,7 @@
 {% block content %}
     <h1>{{ post.title }}</h1>
     <p>{{ post.body }}</p>
+    {% for image in post.image_set.all %}
+        <img src="{{ image.image.url }}" alt="">
+    {% endfor %}
 {% endblock content %}

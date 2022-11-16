@@ -33,6 +33,7 @@ body {
     background-color: var(--bg-gray);
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -202,6 +203,10 @@ h1 {
 
 .info-item {
     margin: 30px;
+}
+
+.date {
+    margin-top: 100px;
 }
 
 
