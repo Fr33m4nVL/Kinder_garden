@@ -4,7 +4,14 @@
 {% block content %}
     <h1>{{ post.title }}</h1>
     <p>{{ post.body }}</p>
-    {% for image in post.image_set.all %}
-        <img src="{{ image.image.url }}" alt="">
-    {% endfor %}
+    <div class="container">
+        {% for image in post.image_set.all %}
+            <img class="post-images" src="{{ image.image.url }}" alt="">
+        {% endfor %}
+    </div>
+    <div class="container">
+        <a id="back" href="{% url 'home' %}">
+            <button class="to-home">На главную</button>
+        </a>
+    </div>
 {% endblock content %}

@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'multiupload',
     'widget_tweaks',
     'users.apps.UsersConfig',
     'news.apps.NewsConfig',
@@ -111,9 +110,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
+
 STATICFILES_DIRS = ['static']
+
 STATIC_ROOT = BASE_DIR / 'staticfiles' #ADD AT PRODUCTOIN
 MEDIA_ROOT = BASE_DIR / 'media'
+
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
