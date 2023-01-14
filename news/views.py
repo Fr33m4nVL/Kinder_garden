@@ -1,7 +1,8 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, DeleteView
 from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.urls import reverse_lazy
 
 from .models import Post, Image
 from .forms import PostForm
@@ -14,10 +15,11 @@ class NewsDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-class NewsCreateView(CreateView):
+class NewsCreateView(LoginRequiredMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'post_new.html'
+    login_url = 'account_login'
 
     def post(self, request):
         if request.method == 'POST':
@@ -28,7 +30,6 @@ class NewsCreateView(CreateView):
                 author=request.user
             )
             images = request.FILES.getlist('images')
-            print(images)
 
             for f in images:
                 a = Image(post=post, image=f)
@@ -37,12 +38,7 @@ class NewsCreateView(CreateView):
             return HttpResponseRedirect('/')
 
 
-#class NewsEditView(UpdateView):
-    #model = Post
-    #template_name = 'post_edit.html'
-    #fields = ['title', 'body', 'preview', 'pictures']
-
-#class DeleteView(DeleteView):
-    #model = Post
-    #template_name = 'post_delete.html'
-    #success_url = reverse_lazy('home')
+class NewsDeleteView(DeleteView):
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = reverse_lazy('home')

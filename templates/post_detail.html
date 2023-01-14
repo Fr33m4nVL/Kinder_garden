@@ -13,5 +13,10 @@
         <a id="back" href="{% url 'home' %}">
             <button class="to-home">На главную</button>
         </a>
+        {% if user.is_authenticated %}
+            <a id="back" href="{% url 'post_delete' post.pk %}">
+                <button id="delete" class="to-home">Delete</button>
+            </a>
+        {% endif %}
     </div>
 {% endblock content %}

@@ -19,30 +19,32 @@
                 <div class="logo">
                     <p><a href="{% url 'home' %}">Филиал №7 - "Детский сад с. Роща"</a></p>
                 </div>
-                <div class="search">
-                    <img class="search-logo" src="{% static 'img/search.svg' %}" alt="Поиск">
-                    <p class="search-logo">Поиск</p>
-                </div>
-                <div class="eye">
-                    <a href="#"><img src="{% static 'img/profile.svg' %}" alt="eye"></a>
-                </div>
+                    {% if user.is_authenticated %}
+                        <div class="add-button">
+                            <a href="{% url 'addition' %}">Добавить</a>
+                        </div>
+                    {% else %}
+                        <div class="eye">
+                            <a href="{% url 'login' %}"><img src="{% static 'img/profile.svg' %}" alt="eye"></a>
+                        </div>
+                    {% endif %}
             </nav>
 
             <div class="bottom-bar">
-                <div id="violet" class="tile">
+                <div id="violet" class="tile violet">
                     <a href="#">Сведения об образовательной организации</a>
                 </div>
-                <div id="blue" class="tile">
+                <div id="blue" class="tile blue">
                     <a href="#">Методическая копилка</a>
                 </div>
-                <div id="lime" class="tile">
-                    <a href="#">Педагогический состав</a>
+                <div id="lime" class="tile lime">
+                    <a href="{% url 'ped_staff' %}">Педагогический состав</a>
                 </div>
-                <div id="pink" class="tile">
+                <div id="pink" class="tile pink">
                     <a href="{% url 'home' %}">Новости</a>
                 </div>
-                <div id="yellow" class="tile">
-                    <a href="#">Фотоальбом</a>
+                <div id="yellow" class="tile yellow">
+                    <a href="{% url 'photoalbum_home' %}">Фотоальбом</a>
                 </div>
             </div>
         </div>

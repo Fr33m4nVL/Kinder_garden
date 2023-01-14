@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h1>Педагогический состав</h1>
+        <div class="staff-container">
+            {% for user in users %}
+                <div class="staff-card">
+                    <div class="staff-wrapper">
+                        <img src="{{ user.photo.url }}" alt="">
+                        <ul>
+                            <li><b>ФИО:</b> {{ user.last_name }} {{ user.first_name }} {{ user.fathers_name}}</li>
+                            <li><b>Телефон:</b> {{ user.phone_number }}</li>
+                            <li><b>Должность:</b> {{ user.staff_post }}</li>
+                            <li><a href="#">Методическая копилка</a></li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        <a id="back" href="{% url 'home' %}">
+            <button class="to-home">На главную</button>
+        </a>
+    </div>
+{% endblock content %}

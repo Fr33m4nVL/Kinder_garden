@@ -7,7 +7,6 @@ name = "pypi"
 django = "*"
 psycopg2 = "*"
 pillow = "*"
-django-widget-tweaks = "*"
 environs = {extras = ["django"], version = "*"}
 
 [dev-packages]

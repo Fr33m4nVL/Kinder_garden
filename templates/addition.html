@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Создание{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <ul class="add-buttons-container">
+            <li id="pink-link" class="tile-md"><a href="{% url 'post_new' %}">Создать Новость</a></li>
+            <li id="yellow-link" class="tile-md"><a href="{% url 'photoalbum_new' %}">Создать фотоальбом</a></li>
+            <li id="blue-link" class="tile-md"><a href="#">Добавить методику</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <a id="back" href="{% url 'home' %}">
+            <button class="to-home">На главную</button>
+        </a>
+    </div> 
+{% endblock content %}

@@ -26,9 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'widget_tweaks',
-    'users.apps.UsersConfig',
-    'news.apps.NewsConfig',
+
+    'users',
+    'news',
+    'additional_information',
+    'photoalbum',
+    'methods',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +132,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

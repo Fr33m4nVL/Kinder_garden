@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="photoalbums">
+            <h1>Фотографии</h1>
+
+            <div class="photos-sliders">
+                {% for photoalbum in object_list %}
+                    <div class="photoalbum-slider">
+                        <h2><a href="{% url 'photoalbum_detail' photoalbum.pk %}">{{ photoalbum.title }}</a></h2>
+                        {% for image in photoalbum.image_set.all %}
+                            {% if image.image_spec_id < 5 %}
+                            <img width="150" height="150" src="{{ image.image.url }}" alt="">
+                            {% endif %}
+                        {% endfor %}
+                        <p class="date">{{ photoalbum.date_created }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

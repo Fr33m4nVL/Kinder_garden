@@ -6,9 +6,11 @@ class Post(models.Model):
     title = models.CharField(max_length=60)
     body = models.TextField(null=True, blank=True)
     preview = models.ImageField(upload_to='previews')
-    #image = models.ImageField(upload_to='content', blank=True, null=True)
     date_created = models.DateField(auto_now_add=True, null=True, blank=True)
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ('-date_created',)
 
     def __str__(self):
         return self.title
