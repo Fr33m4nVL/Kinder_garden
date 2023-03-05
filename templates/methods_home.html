@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Методики{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="method-list">
+            <h1>Методики</h1>
+            {% for method in object_list %}
+                <ul class="method-ul">
+                    <a href="{% url 'method_detail' method.pk %}"><li id="method-title">{{ method.title }}</li></a>
+                    <li> - {{ method.author.last_name}} {{ method.author.first_name }} - </li>
+                    <li>{{ method.date_created }}</li>
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

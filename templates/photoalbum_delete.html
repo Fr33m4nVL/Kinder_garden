@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Удалить фотоальбом{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h2>Вы уверены, что хотите удалить фотоальбом?</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input class="delete-button" type="submit" value="Да, удалить">
+        </form>
+    </div>
+    <div class="container">
+        <a id="back" href="{% url 'photoalbum_home' %}">
+            <button class="to-home">На главную</button>
+        </a>
+    </div>
+{% endblock content %}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record>
+   <header>
+    <identifier>oai:libfl.ru:BJVVV407347</identifier>
+    <datestamp>2017-11-14T15:17:30Z</datestamp>
+   </header>
+   <metadata>
+    <marc:record xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+     <marc:leader>   nam 2200000 i 450 </marc:leader>
+     <marc:controlfield tag="001">BJVVV407347</marc:controlfield>
+     <marc:controlfield tag="005">20191001174902.0</marc:controlfield>
+     <marc:datafield ind1=" " ind2=" " tag="100">
+      <marc:subfield code="a">20191001u    u y0rusy50   ca</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1="|" ind2=" " tag="101">
+      <marc:subfield code="a">fre</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2=" " tag="105">
+      <marc:subfield code="a">y  z  000|y</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1="1" ind2=" " tag="200">
+      <marc:subfield code="a">Le désir de vivre</marc:subfield>
+      <marc:subfield code="f">Paul Acker</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1="1" ind2=" " tag="200">
+      <marc:subfield code="b">Бумага</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2=" " tag="210">
+      <marc:subfield code="c">Levy</marc:subfield>
+      <marc:subfield code="a">Paris</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2=" " tag="210">
+      <marc:subfield code="d">s.a.</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2=" " tag="215">
+      <marc:subfield code="a">273 p.</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1="0" ind2=" " tag="606">
+      <marc:subfield code="a">Французская литература</marc:subfield>
+      <marc:subfield code="z">Первая половина 20 в.</marc:subfield>
+      <marc:subfield code="j">Романы, повести</marc:subfield>
+      <marc:subfield code="2">ВГБИЛ</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2=" " tag="675">
+      <marc:subfield code="a">821.133.1-31"190/194"</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2="1" tag="700">
+      <marc:subfield code="b">Paul</marc:subfield>
+      <marc:subfield code="a">Acker</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2="0" tag="801">
+      <marc:subfield code="a">RU</marc:subfield>
+      <marc:subfield code="b">RuMoBil</marc:subfield>
+      <marc:subfield code="c">20081231</marc:subfield>
+      <marc:subfield code="g">RCR</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2="1" tag="801">
+      <marc:subfield code="a">RU</marc:subfield>
+      <marc:subfield code="b">RuMoBil</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2="3" tag="801">
+      <marc:subfield code="a">RU</marc:subfield>
+      <marc:subfield code="b">RuMoBil</marc:subfield>
+      <marc:subfield code="c">20191001</marc:subfield>
+      <marc:subfield code="Э">rusmarc</marc:subfield>
+     </marc:datafield>
+     <marc:datafield ind1=" " ind2=" " tag="899">
+      <marc:subfield code="a">ВГБИЛ</marc:subfield>
+     </marc:datafield>
+    </marc:record>
+   </metadata>
+  </record>

@@ -20,6 +20,9 @@
                     <p><a href="{% url 'home' %}">Филиал №7 - "Детский сад с. Роща"</a></p>
                 </div>
                     {% if user.is_authenticated %}
+                        <div class="out-button">
+                            <a href="{% url 'logout' %}">Выйти</a>
+                        </div>
                         <div class="add-button">
                             <a href="{% url 'addition' %}">Добавить</a>
                         </div>
@@ -32,10 +35,10 @@
 
             <div class="bottom-bar">
                 <div id="violet" class="tile violet">
-                    <a href="#">Сведения об образовательной организации</a>
+                    <a href="{% url 'info' %}">Сведения об образовательной организации</a>
                 </div>
                 <div id="blue" class="tile blue">
-                    <a href="#">Методическая копилка</a>
+                    <a href="{% url 'methods_home' %}">Методическая копилка</a>
                 </div>
                 <div id="lime" class="tile lime">
                     <a href="{% url 'ped_staff' %}">Педагогический состав</a>

@@ -38,7 +38,7 @@ class NewsCreateView(LoginRequiredMixin, CreateView):
             return HttpResponseRedirect('/')
 
 
-class NewsDeleteView(DeleteView):
+class NewsDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')

@@ -1,7 +1,9 @@
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+
 
 from .models import Photoalbum, Image
 from .forms import PhotoalbumForm
@@ -36,3 +38,8 @@ class PhotoalbumCreateView(LoginRequiredMixin, CreateView):
                 a.save()
 
             return HttpResponseRedirect('/photoalbums/')
+
+class PhotoalbumDeleteView(LoginRequiredMixin, DeleteView):
+    model = Photoalbum
+    template_name = 'photoalbum_delete.html'
+    success_url = reverse_lazy('photoalbum_home')

@@ -1,0 +1,27 @@
+{% extends 'form_base.html' %}
+
+{% block title %}Создать методику{% endblock title %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+        <div class="form-content">
+            <h1>Создать Методику</h1>
+            <div class="form-group">
+                <label>Название методики</label>
+                <input name="title" type="text" placeholder="Введите название" class="forma">
+            </div>
+            <div class="form-group">
+                <label for="body">Текст</label>
+                <textarea name="body" cols="40" rows="10" placeholder="Введите текст" type="text" class="forma"></textarea>
+            </div>
+            <div class="form-group">
+                {{ form.files }}
+            </div>
+            <div class="form-group">
+                <input type="submit" class="sub" value="Создать">
+                <a class="btn-link" href="{% url 'home' %}">Назад</a>
+            </div>
+        </div>
+    </form>
+{% endblock content %}

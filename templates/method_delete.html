@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Удалить запись{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h2>Вы уверены, что хотите удалить методику?</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input class="delete-button" type="submit" value="Да, удалить">
+        </form>
+    </div>
+    <div class="container">
+        <a id="back" href="{% url 'home' %}">
+            <button class="to-home">На главную</button>
+        </a>
+    </div>
+{% endblock content %}

@@ -4,5 +4,23 @@
 {% block content %}
     <div class="container">
         <h1>Сведения об образовательной организации</h1>
+        <div class="info-flex">
+            <table class="info-table">
+                {% for category in main_info %}
+                    <tr>
+                        <td>{{ category.category_name }}</td>
+                        <td>{{ category.category_fill }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div class="add-info">
+                <h2>Дополнительная информация</h2>
+                <ul class="add-info-list">
+                    <a href="{% url 'edu_structure' %}"><li>Структура и органы управления образовательной организацией</li></a>
+                    <a href="{% url 'docs' %}"><li>Документы</li></a>
+                    <a href="{% url 'edu_standarts' %}"><li>Образовательные стандарты</li></a>
+                </ul>
+            </div>
+        </div>
     </div>
 {% endblock content %}

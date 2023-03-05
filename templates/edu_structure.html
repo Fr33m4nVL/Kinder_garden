@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Структура{% endblock title %}
+
+{% block content %}
+    <div class="cotainer">
+        <h1>Филиал №7 - "Детский сад с. Роща"</h1>
+        <div class="info-table">
+            <table class="add-info-list">
+                <tr>
+                    <td>ФИО руководителя</td>
+                    <td>Борисова Ольга Борисовна</td>
+                </tr>
+                <tr>
+                    <td>Должность</td>
+                    <td>Заведующий филиалом</td>
+                </tr>
+                <tr>
+                    <td>Место нахождения</td>
+                    <td>623016, Свердловская обл., Шалинский р-н, с. Роща, ул. Лермонтова, д. 7</td>
+                </tr>
+                <tr>
+                    <td>Адрес сайт</td>
+                    <td><a href="http://localhost:8000">http://localhost:8000</a></td>
+                </tr>
+                <tr>
+                    <td>Электронная почта</td>
+                    <td>detcad7@yandex.ru</td>
+                </tr>
+                <tr>
+                    <td>Дополнительная информация</td>
+                    <td>рабочий телефон (34358)-4-92-34</td>
+                </tr>
+                <tr>
+                    <td>Положение о филиале</td>
+                    <td><a href="{% static 'docs/doc_1.pdf' %}" download>Скачать</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

@@ -99,6 +99,14 @@ nav div {
     color: #fff;
 }
 
+.out-button {
+    font-size: 32px;
+    background-color: #dc2626;
+    padding: 0 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
 .add-buttons-container {
     margin-top: 50px;
 }
@@ -185,6 +193,8 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: baseline;
+    margin-left: 70px;
 }
 
 .slider {
@@ -282,6 +292,7 @@ h1 {
     max-width: 800px;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
 }
 
 .staff-wrapper {
@@ -312,8 +323,15 @@ h1 {
     color: #006090;
 }
 
-#delete {
+.delete-button {
     background-color: #dc2626;
+    margin-top: 100px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
 }
 
 .date {
@@ -333,13 +351,14 @@ h1 {
     border-radius: 15px;
     margin-bottom: 30px;
     max-width: 715px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25) ;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .photoalbum-slider img {
     margin-left: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .photoalbum-slider h2 {
@@ -352,6 +371,67 @@ h1 {
     color: var(--text-blue);
 }
 
+/* methods */
+
+.method-list {
+    margin-top: 30px;
+    font-size: 1.6em;
+}
+
+.method-list h1 {
+    margin-bottom: 50px;
+}
+
+.method-ul {
+    display: inline;
+    margin-bottom: 50px;
+}
+
+.method-ul li {
+    display: inline;
+}
+
+#method-title {
+    background-color: var(--bg-blue);
+    color: var(--text-blue);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.method-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Additonal inforamtion */
+
+.info-table{
+    border-spacing: 1.6em;
+}
+
+.info-flex {
+    display: flex;
+}
+
+.add-info {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.add-info h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.add-info-list a{
+    color: var(--text-blue);
+}
+
+.add-info-list li {
+    margin-top: 10px;
+}
 
 /* Media */
 

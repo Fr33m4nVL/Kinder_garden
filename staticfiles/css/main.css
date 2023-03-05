@@ -29,7 +29,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+    font-size: 1.6em;
     background-color: var(--bg-gray);
 }
 
@@ -203,6 +203,11 @@ h1 {
 
 .info-item {
     margin: 30px;
+}
+
+#file-link {
+    margin-top: 30px;
+    color: var(--text-blue);
 }
 
 
