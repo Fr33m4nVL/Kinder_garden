@@ -467,6 +467,9 @@ h1 {
     .tile a {
         font-size: 12px;
     }
+    .info-flex {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 767px) {
@@ -498,5 +501,15 @@ h1 {
     }
     .info {
         flex-direction: column;
+    }
+    .info-flex {
+        flex-direction: column;
+    }
+    .staff-wrapper img {
+        height: 250px;
+        width: 150px;
+    }
+    .staff-wrapper {
+        font-size: 0.6em;
     }
 }

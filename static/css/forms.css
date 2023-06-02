@@ -50,3 +50,11 @@ body {
 .form-group {
     margin: 30px;
 }
+
+
+@media (max-width: 767px) {
+    .form-content {
+        width: 300px;
+        font-size: 14px;
+    }
+}
